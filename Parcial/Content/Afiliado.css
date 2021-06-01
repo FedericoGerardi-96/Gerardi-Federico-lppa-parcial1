@@ -1,0 +1,49 @@
+﻿.dataTable-Container {
+    background-color: #2a3338;
+    border-radius: 3px;
+    color: white;
+    width: 1000px;
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.dataTable-Container .datatable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.dataTable-Container .datatable,
+.dataTable-Container .datatable th,
+.dataTable-Container .datatable td {
+    padding: 12px 12px;
+}
+
+.dataTable-Container .datatable th{
+    font-weight: bolder;
+    text-align: left;
+    border-bottom: solid 1px rgb(61, 68,73);
+}
+
+.dataTable-Container .datatable td {
+    border-bottom: solid 1px rgb(61, 68,73);
+}
+
+.dataTable-Container .datatable td a{
+        text-decoration: none;
+    color: white;
+}
+
+.dataTable-Container .datatable tr:nth-child(even){
+    background-color: rgb(61, 68,73);
+}
+
+.dataTable-Container .datatable tr:hover{
+    background-color: #3282b8;
+}
+
+

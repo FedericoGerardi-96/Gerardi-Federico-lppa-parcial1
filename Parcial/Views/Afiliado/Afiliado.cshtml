@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Parcial.Shared.Parcial.Entities.Models.Afiliado>
+
+<link href="~/Content/Afiliado.css" rel="stylesheet" />
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create")
+</p>
+<div class="dataTable-Container">
+    <table class="datatable">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreYApellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.CUIT)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreYApellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CUIT)
+        </td>
+        <td>
+            @Html.ActionLink("Modificar", "Update", new { id = item.Id }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+        </td>
+    </tr>
+        }
+    </table>
+</div>

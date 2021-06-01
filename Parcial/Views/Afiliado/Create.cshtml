@@ -1,0 +1,47 @@
+﻿@model Parcial.Shared.Parcial.Entities.Models.Afiliado
+
+<link href="~/Content/AfiliadoCreate.css" rel="stylesheet" />
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <form class="form" action="">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+        <div class="camps-container">
+            <div class="camp">
+                @Html.LabelFor(model => model.NombreYApellido, htmlAttributes: new { })
+                @Html.EditorFor(model => model.NombreYApellido, new { htmlAttributes = new { } })
+                @Html.ValidationMessageFor(model => model.NombreYApellido, "", new { @class = "text-danger" })
+            </div>
+            <div class="camp">
+                @Html.LabelFor(model => model.Telefono, htmlAttributes: new { })
+                @Html.EditorFor(model => model.Telefono, new { htmlAttributes = new { } })
+                @Html.ValidationMessageFor(model => model.Telefono, "", new { @class = "text-danger" })
+            </div>
+            <div class="camp">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { })
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+            <div class="camp">
+                @Html.LabelFor(model => model.CUIT, htmlAttributes: new { })
+                @Html.EditorFor(model => model.CUIT, new { })
+                @Html.ValidationMessageFor(model => model.CUIT, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" />
+                </div>
+            </div>
+            <div>
+                @Html.ActionLink("VOLVER", "Afiliado")
+            </div>
+        </div>
+
+    </form>
+
+}
+
+

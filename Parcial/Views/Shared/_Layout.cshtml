@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <link href="~/Content/Layout.css" rel="stylesheet" />
+    <title>@ViewBag.Title - Algo </title>
+
+</head>
+<body class="row">
+
+    <div class="nav-bg">
+        <nav class="Nav-Contenido">
+            <img src="~/Content/pngegg.png" />
+            <a href="@Url.Action("Index", "Home")">Inicio</a>
+            <a href="@Url.Action("Afiliado", "Afiliado")">Usuario</a>
+        </nav>
+    </div>
+
+        <div class="Contenido">
+            <div class="Principal">
+                @RenderBody()
+            </div>
+        </div>
+
+        <div class="footer">
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Parcial-Aplication</p>
+                <p>Nombre: Federico</p>
+                <p>Apellido: Gerardi</p>
+                <p>DNI: 39548167</p>
+            </footer>
+        </div>
+
+</body>
+</html>

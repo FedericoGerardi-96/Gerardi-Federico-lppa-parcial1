@@ -1,0 +1,49 @@
+﻿@model Parcial.Shared.Parcial.Entities.Models.Afiliado
+
+<h3>Seguro desea eliminar este afiliado?</h3>
+<div>
+    <h4>Afiliado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreYApellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreYApellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CUIT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUIT)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Afiliado", "Afiliado")
+        </div>
+    }
+</div>
